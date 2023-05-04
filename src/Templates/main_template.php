@@ -7,6 +7,6 @@
     <title>Сайт-визитка</title>
 </head>
 <body>
-    <?php $contentName; ?>
+    <?php include $contentName; ?>
 </body>
 </html>

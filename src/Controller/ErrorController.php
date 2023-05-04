@@ -15,7 +15,7 @@ class ErrorController {
     public function PageNotFound() {
 
         
-        $view->render('404');
+        $view->render('404.php');
     }
 
 }

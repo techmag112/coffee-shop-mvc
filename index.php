@@ -1,4 +1,4 @@
 <?php
 
 ini_set('display_errors', 1);
-require_once 'src/App/bootstrap.php';
+require_once 'src/App/bootloader.php';

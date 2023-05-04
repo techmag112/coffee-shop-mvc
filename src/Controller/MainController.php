@@ -12,21 +12,19 @@ class MainController {
         $this->view = new View();
     }
 
-    public function mainAction() {
-
-        
-        $view->render('main');
+    public function mainPage() {
+        $this->view->render('main.php');
     }
 
-    public function aboutAction() {
+    public function aboutPage() {
 
         
-        $view->render('about');
+        $this->view->render('about.php');
     }
 
-    public function contactAction() {
+    public function contactPage() {
 
         
-        $view->render('contact');
+        $this->view->render('contact.php');
     }
 }
