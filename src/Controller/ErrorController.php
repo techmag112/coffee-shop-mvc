@@ -13,9 +13,8 @@ class ErrorController {
     }
 
     public function PageNotFound() {
-
         
-        $view->render('404.php');
+        $this->view->render('404.php');
     }
 
 }
