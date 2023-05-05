@@ -4,10 +4,10 @@ namespace src\Core;
 
 class View {
 
-    public function render(string $contentName, array $params = [], string $templateName = 'main_template') {
-        $templatePath = 'src/Templates/' . $templateName . '.php';
+    public function render(string $contentName, array $params = []) {
+        $templatePath = 'src/Templates/main_template.php';
         if (file_exists($templatePath)) {
-            extract($params);
+           // extract($params);
            require $templatePath;
        }
     }

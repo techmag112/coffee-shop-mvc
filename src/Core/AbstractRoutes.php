@@ -8,9 +8,9 @@ abstract class AbstractRoutes {
     
     function __construct() {
         $this->routes = [
-            '/' => ['\src\Controller\MainController'],
-            '/about/' => ['\src\Controller\MainController', 'aboutPage'],
-            '/contact/' => ['\src\Controller\MainController', 'contactPage'],
+            '/' => 'mainPage',
+            '/about/' => 'aboutPage',
+            '/contact/' => 'contactPage',
         ];
     }
 

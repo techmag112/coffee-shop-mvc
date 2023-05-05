@@ -2,22 +2,26 @@
 
 namespace src\Core;
 
-use \src\Controller\MainController;
-use \src\Controller\ErrorController;
+use \src\Controller\Controller;
 
 class Router extends AbstractRoutes {
+
+    private $controller;
+
+    function __construct(Controller $controller) {
+        $this->controller = $controller;
+        parent::__construct();
+    }
     
     public function run() {
 
         $uri = $_SERVER['REQUEST_URI'];
         if (isset($this->routes[$uri])) {
-            $controller = new $this->routes[$uri][0];
-            $action = $this->routes[$uri][1] ?? 'mainPage';
+            $action = $this->routes[$uri];
         } else {
-            $controller = new ErrorController();
             $action = 'PageNotFound';
         }
-        $controller->$action();
+        $this->controller->$action();
 
     }
 
