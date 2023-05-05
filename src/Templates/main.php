@@ -1,33 +1,3 @@
-<?php
-
-?>
-<header class="header"> 
-        <div class="wrapper" style="background: url('./public/img/Main_bg.jpg') no-repeat;">
-            <div class="header__wrapper">
-                <div class="header__logo">
-                    <a href="/" class="header__logo_link">
-                        <img src="./public/img/svg/coffee-beans.svg" alt="Logo Coffee house" class="header__logo_pic">
-                    </a>
-                </div>
-                <nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="header__item">
-                            <a href="/" class="menu__link active" style="color:white">Coffee house</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="/about" class="menu__link" style="color:white">Our coffee</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="/pleasure" class="menu__link" style="color:white">For your pleasure</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-	    <div class="header__logo_text">
-                Everything You Love About Coffee
-            </div>
-        </div>
-    </header>
     <section>
        <div class="wrapper__section" style="margin-top: 30px;">
         <div class="title_section">
@@ -57,23 +27,13 @@
                     Our best
                 </div>
                 <div class="footer_ext_best_list">
-                    <?php foreach($params as $item): ?>
+                    <?php foreach($params[0] as $item): ?>
                         <div class="footer_ext_best_card">
-                            <img src="./public/img/best01.jpg" alt="Best Coffee 1" class="best_coffee_pic">
-                            <div class="coffee_name">Solimo Coffee Beans 2 kg</div>
-                            <div class="coffee_price">10.73$</div>
+                            <img src="<?= './public/img/' . $item["img"] ?>" alt="Best Coffee" class="best_coffee_pic"> 
+                            <div class="coffee_name"><?= $item["kind"] ?></div>
+                            <div class="coffee_price"><?= $item["price"] ?></div>
                         </div>
                     <?php endforeach ?>
-                    <div class="footer_ext_best_card">
-                        <img src="./public/img/best02.jpg" alt="Best Coffee 2" class="best_coffee_pic">
-                        <div class="coffee_name">Presto Coffee Beans 1 kg</div>
-                        <div class="coffee_price">15.99$</div>
-                    </div>
-                    <div class="footer_ext_best_card">
-                        <img src="./public/img/best03.jpg" alt="Best Coffee 3" class="best_coffee_pic">
-                        <div class="coffee_name">AROMISTICO Coffee 1 kg</div>
-                        <div class="coffee_price">6.99$</div>
-                    </div>
                 </div>
             </div> 
             <div class="footer_main">

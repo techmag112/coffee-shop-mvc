@@ -10,7 +10,9 @@ abstract class AbstractRoutes {
         $this->routes = [
             '/' => 'mainPage',
             '/about/' => 'aboutPage',
+            '/about' => 'aboutPage',
             '/contact/' => 'contactPage',
+            '/contact' => 'contactPage',
         ];
     }
 
